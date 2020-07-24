@@ -1,0 +1,11 @@
+// This file relates to content in the header of the page.
+
+
+// This includes keyframes for the logo animation when page is scrolled.
+@include keyframes-logo-animation();
+
+// This includes keyframes for the reversed logo animation, when page is scrolled back to top.
+@include keyframes-logo-animation-reverse();
+
+// This animates the overlay layer.
+@include keyframes-overlay-animation();

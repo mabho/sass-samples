@@ -1,0 +1,81 @@
+// Loads external Google Fonts file.
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+// Global definitions
+$primary-color: #93d50a;
+$secondary-color: #000;
+$text-color: black;
+$light-text-color: #666;
+$color-members: #6aa8b6;
+
+// Season colors
+$color-spring: $primary-color;
+$color-summer: #c76047;
+$color-autumn: #c49237;
+$color-winter: #01baec;
+
+// Generic colors
+$color-white: #fff;
+$color-black: #000;
+$color-darkgray: #262424;
+$color-midlightgray: #e6e6e6;
+$color-lightgray: #f7f7f8;
+
+// Breakpoints
+$breakpoint-lg: 1140px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+
+// Admin bar heights
+$admin-bar-height-md: 46px;
+$admin-bar-height-lg: 32px;
+
+// Text
+$font-family--title: 'Oswald', Impact, 'Array Narrow', Arial;
+$font-family--regular: 'Raleway', Helvetica, Arial;
+
+$text-small--font-size: 1rem;
+$text-small--line-height: 1.5;
+$text-regular--font-size: 1.25rem;
+$text-regular--line-height: 1.35;
+$text-large--font-size: 2rem;
+$text-large--line-height: 1.125;
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+// Global website header
+$global-header-01-height: 75px; // Deprecated... May be removed soon.
+$global-header-01-height-scrolled: 55px;
+$header-search-font-size: 1.75rem; // The size of the text inside the search field.
+
+// Scroll menu
+$scroll-menu-margin: 50px;
+$scroll-menu-line-height: 3rem;
+
+// Hamburger menu variables - These variables have to do with hamburger menu.
+$hamburger-icon-width: 44px;
+$hamburger-icon-height: 34px;
+$hamburger-icon-bar-width-02: $hamburger-icon-width;
+$hamburger-icon-bar-width-01: calc(#{$hamburger-icon-bar-width-02} * .5);
+$hamburger-icon-bar-width-03: calc(#{$hamburger-icon-bar-width-02} * .85);
+$hamburger-icon-bar-height: 4px;
+$hamburger-icon-bar-color: $color-black;
+$hamburger-icon-bar-position-02: #{$hamburger-icon-height} / 2 - ( #{$hamburger-icon-bar-height} / 2 );
+
+// Menu variables
+$secondary-color-menu: #3baab8;
+$tertiary-color-menu: #95ccc0;
+
+// Columns
+$column-gutter: 20px;
+$column-gutter-large: 50px;
+
+// Transitions
+$default-transition-speed: .25s;
+
+// Parts
+
+// Calendar
+$calendar-column-date-day-width: 80px;
+$calendar-column-image-width: 250px;
+$calendar-column-extra-info-width: 200px;

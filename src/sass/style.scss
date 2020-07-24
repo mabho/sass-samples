@@ -1,0 +1,34 @@
+  
+/* ----------------------------------------------------------------------------
+ * Main Stylesheet file.
+ *
+ * Source file for all SCSS files.
+ * ------------------------------------------------------------------------- */
+
+// — VENDORS.
+
+// Normalize.
+// Apparently, not required in the beginning of the project, as Hello Elementor must include Normalize (to be confirmed).
+// @import 'vendor/normalize';
+
+// Variables.
+@import 'base/variables';
+
+// Base.
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/reuse';
+@import 'base/forms';
+
+// Layout.
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/page-specific';
+@import 'layout/footer';
+
+// Parts.
+@import 'parts/calendar';
+@import 'vendor/every-action';
+
+// Vendor
+@import 'vendor/elementor';

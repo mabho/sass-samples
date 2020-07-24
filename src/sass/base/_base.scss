@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+
+  // Custom styling for scrollbars
+  --scrollbarBG: #eee;
+  --thumbBG: #bbb;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family--regular;
+  font-size: $text-regular--font-size;
+  font-weight: 300;
+  line-height: $text-regular--line-height;
+  min-width: 360px;
+
+  // Here we apply some custom styling to the scrollbars.
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family--title;
+  line-height: 1.25;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  :not(:last-child) {
+    margin: 0 0 1rem;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  //padding: 0 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+    max-width: 1025px;
+    padding: 0 15px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1140px;
+    padding: 0 20px;
+  } 
+}
