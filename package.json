@@ -1,7 +1,7 @@
 {
-  "name": "hello-tec",
+  "name": "sass-samples",
   "version": "1.0.0",
-  "description": "Contains Sass settings for Hello TEC theme. Requires node to compile.",
+  "description": "Contains Sass sample files. Requires node to compile.",
   "scripts": {
     "css": "node-sass --output-style nested --include-path scss src/sass/style.scss assets/css/style.css",
     "watch": "nodemon -e scss -x \"npm run css\""
