@@ -26,7 +26,8 @@ body {
           z-index: 10;
 
           &:hover {
-            animation: fade-out .25s;
+            animation: fade-out .5s ease;
+            opacity: 0;
           }
         }
 

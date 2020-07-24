@@ -4,7 +4,7 @@
 }
 
 @mixin fade-in() {
-  @keyframes scroll-menu-animation {
+  @keyframes fade-in {
     0% {
       opacity: 0;
     }
@@ -15,7 +15,7 @@
 }
 
 @mixin fade-out() {
-  @keyframes scroll-menu-animation-reverse {
+  @keyframes fade-out {
     0% {
       opacity: 1;
     }

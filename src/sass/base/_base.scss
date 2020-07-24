@@ -96,5 +96,5 @@ img {
 }
 
 // Now we pull the keyframe mixins.
-@include fade-out();
 @include fade-in();
+@include fade-out();
