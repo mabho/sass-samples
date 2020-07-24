@@ -13,16 +13,37 @@
 
 </head>
 
-<body>
+<!-- This is the project front page. Class 'front' is applied here only. -->
+<body class="front">
   <script src="assets/js/script.js"></script>
 
   <div class="block-01">
     <h2>This is block nº 1</h2>
-    <div class="block-01__first">
-      Hover this button to reveal the hidden text.
+    <div class="block-01__wrapper">
+      <div class="block-01__wrapper__first">
+        Hover this button to reveal the hidden text.
+      </div>
+      <div class="block-01__wrapper__second">
+        This is the hidden text.
+      </div>
     </div>
-    <div class="block-01__second">
-      This is the hidden text.
+  </div>
+
+  <div class="block-02">
+    <div class="block-02__child-01">
+      <h2>This is block nº 2</h2>
+      <div class="block-02__child-01__content">
+        It is divided in two and uses a custom backgorund color.
+      </div>
+    </div>
+
+    <div class="block-02__child-02">
+      <div class="block-02__child-02__placeholder">
+        This is the second block. Hover here...
+      </div>
+      <div class="block-02__child-02__revealed">
+        ... and see the following element being revealed.
+      </div>
     </div>
   </div>
 </body>

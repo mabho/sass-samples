@@ -1,1 +1,78 @@
 // This 'page-specific' style page makes sense in a project where there are classes that make sense to some pages only.
+
+body {
+
+  // Applies to the front page only.
+  &.front {
+    background-color: #ff9;
+
+    // This block is being styled for the front page only
+    .block-01 {
+      @include reusable-stuff();
+      margin: $column-gutter-large;
+      padding: $column-gutter-large;
+      
+      .block-01__wrapper {
+        position: relative;
+
+        .block-01__wrapper__first {
+          background-color: green;
+          color: $color-white;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 10;
+
+          &:hover {
+            animation: fade-out .25s;
+          }
+        }
+
+        .block-01__wrapper__second {
+          background-color: red;
+          color: $color-white;
+        }
+      }
+    }
+
+    // Now, let's use some grid layout here.
+    .block-02 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: $column-gutter-large;
+      margin: $column-gutter-large;
+
+      // Here we will style both of .block-02 immediate children.
+      &> div  {
+        background-color: $color-midlightgray;
+        padding: $column-gutter-large;
+
+        &.block-02__child-02 {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-row-gap: $column-gutter-large;
+
+          .block-02__child-02__placeholder {
+            transition: .25s all;
+
+            &:hover {
+
+              // This will select the next element. Sometimes this type of selector is useful.
+              &+div {
+                background-color: fuchsia;
+                color: $color-white;
+              }
+            }
+          }
+
+          .block-02__child-02__revealed {
+            color: $color-midlightgray;
+            transition: .25s all;
+          }
+        }
+      }
+    }
+  }
+}

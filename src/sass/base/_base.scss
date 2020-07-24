@@ -21,7 +21,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 
-  &::-webkit-scrollbar {
+  &::-webkit-scrollbar {  
     width: 11px;
   }
 
@@ -94,3 +94,7 @@ img {
     padding: 0 20px;
   } 
 }
+
+// Now we pull the keyframe mixins.
+@include fade-out();
+@include fade-in();

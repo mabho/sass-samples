@@ -1,74 +1,11 @@
 @mixin reusable-stuff() {
-  background-color: $color-gray;
+  background-color: $color-members;
   border: dashed 4px $color-darkgray;
 }
 
-// Keyframe mixins.
-@mixin keyframes-logo-animation() {
-  @keyframes logo-animation {
-    0% {
-      width: 70px;
-      opacity: 1;
-    }
-    50% {
-      width: 48px;
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      width: 48px;
-    }
-  }
-}
-
-@mixin keyframes-logo-animation-reverse() {
-  @keyframes logo-animation-reverse {
-    0% {
-      width: 48px;
-      opacity: 0;
-    }
-    50% {
-      width: 48px;
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      width: 70px;
-    }
-  }
-}
-
-@mixin keyframes-scroll-menu-animation() {
+@mixin fade-in() {
   @keyframes scroll-menu-animation {
     0% {
-      top: $global-header-01-height;
-    }
-    100% {
-      top: $global-header-01-height-scrolled;
-    }
-  }
-}
-
-@mixin keyframes-scroll-menu-animation-reverse() {
-  @keyframes scroll-menu-animation-reverse {
-    0% {
-      top: $global-header-01-height-scrolled;
-    }
-    50% {
-      top: $global-header-01-height-scrolled + 20px;
-    }
-    100% {
-      top: $global-header-01-height
-    }
-  }
-}
-
-@mixin keyframes-overlay-animation() {
-  @keyframes background-animation {
-    0% {
-      opacity: 0;
-    }
-    35% {
       opacity: 0;
     }
     100% {
@@ -77,12 +14,13 @@
   }
 }
 
-@mixin list-menu() {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin-bottom: .75rem;
+@mixin fade-out() {
+  @keyframes scroll-menu-animation-reverse {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
