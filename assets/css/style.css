@@ -1,0 +1,164 @@
+/* ----------------------------------------------------------------------------
+ * Main Stylesheet file.
+ *
+ * Source file for all SCSS files.
+ * ------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+html {
+  box-sizing: border-box;
+  --scrollbarBG: #eee;
+  --thumbBG: #bbb; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Raleway", Helvetica, Arial;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.35;
+  min-width: 360px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG); }
+  body::-webkit-scrollbar {
+    width: 11px; }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG); }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", Impact, "Array Narrow", Arial;
+  line-height: 1.25;
+  margin-top: .5rem;
+  margin-bottom: .5rem; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none; }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300; }
+
+h4 {
+  font-size: 1.25rem; }
+
+p :not(:last-child) {
+  margin: 0 0 1rem; }
+
+p:last-child {
+  margin: 0; }
+
+figure {
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.container {
+  margin: 0 auto; }
+  @media (max-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding: 0 15px; } }
+  @media (min-width: 768px) and (max-width: 1140px) {
+    .container {
+      max-width: 1025px;
+      padding: 0 15px; } }
+  @media (min-width: 1140px) {
+    .container {
+      max-width: 1140px;
+      padding: 0 20px; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.button {
+  background-color: #fff;
+  border: solid 1px #000;
+  color: #000;
+  display: inline-block;
+  padding: .5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .25s; }
+  @media (max-width: 768px) {
+    .button {
+      padding: .5rem; } }
+  .button:hover {
+    background-color: #000;
+    color: #fff; }
+
+.invisible {
+  display: none; }
+
+.font-weight--bold {
+  font-weight: 500; }
+
+.font-size--small {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.font-size--large {
+  font-size: 2rem;
+  line-height: 1.125; }
+
+.text-transform--uppercase {
+  text-transform: uppercase; }
+
+body.front {
+  background-color: #ff9; }
+  body.front .block-01 {
+    background-color: #6aa8b6;
+    border: dashed 4px #262424;
+    margin: 50px;
+    padding: 50px; }
+    body.front .block-01 .block-01__wrapper {
+      position: relative; }
+      body.front .block-01 .block-01__wrapper .block-01__wrapper__first {
+        background-color: green;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10; }
+        body.front .block-01 .block-01__wrapper .block-01__wrapper__first:hover {
+          animation: fade-out .5s ease;
+          opacity: 0; }
+      body.front .block-01 .block-01__wrapper .block-01__wrapper__second {
+        background-color: red;
+        color: #fff; }
+  body.front .block-02 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    margin: 50px; }
+    body.front .block-02 > div {
+      background-color: #e6e6e6;
+      padding: 50px; }
+      body.front .block-02 > div.block-02__child-02 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 50px; }
+        body.front .block-02 > div.block-02__child-02 .block-02__child-02__placeholder {
+          transition: .25s all; }
+          body.front .block-02 > div.block-02__child-02 .block-02__child-02__placeholder:hover + div {
+            background-color: fuchsia;
+            color: #fff; }
+        body.front .block-02 > div.block-02__child-02 .block-02__child-02__revealed {
+          color: #e6e6e6;
+          transition: .25s all; }
